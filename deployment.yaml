@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: memory-game
+  name: memory-game
+  namespace: memory-game
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memory-game
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: memory-game
+    spec:
+      containers:
+        - image: iredkin/pro690image:59
+          name: memory-game
+          env:
+            - name: COLOR
+              value: blue
