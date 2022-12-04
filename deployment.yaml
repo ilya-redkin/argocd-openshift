@@ -17,7 +17,7 @@ spec:
         app: memory-game
     spec:
       containers:
-        - image: iredkin/pro690image:63
+        - image: iredkin/pro690image:67
           name: memory-game
           env:
             - name: COLOR
