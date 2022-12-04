@@ -3,23 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bubble-animation
-  name: bubble-animation
-  namespace: bubble-animation
+    app: memory-game
+  name: memory-game
+  namespace: memory-game
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bubble-animation
+      app: memory-game
   strategy: {}
   template:
     metadata:
       labels:
-        app: bubble-animation
+        app: memory-game
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bubble-animation
+      - image: iredkin/pro690image:1670119104
+        name: memory-game
         env:
         - name: COLOR
           value: "blue"
